@@ -16,7 +16,7 @@ public class IntercepterConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/User/**")
                 .excludePathPatterns("/Picture/PictureStream")
                 .excludePathPatterns("/Picture/UpLoadPicture*");
-        //registry.addInterceptor(new TokenIntercepter()).addPathPatterns("/User/Login");
+        registry.addInterceptor(new TokenIntercepter()).addPathPatterns("/Picture/PictureStream");
         WebMvcConfigurer.super.addInterceptors(registry);
     }
 }
